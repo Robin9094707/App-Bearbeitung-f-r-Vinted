@@ -22,11 +22,15 @@ jobs:
           distribution: temurin
           java-version: 21
 
-      - name: Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: SDK-Pakete installieren
-        run: sdkmanager "platforms;android-37.2" "build-tools;37.0.0" "platform-tools"
+      - name: Android SDK-Pakete installieren
+        run: |
+          SDK="${ANDROID_HOME:-$ANDROID_SDK_ROOT}"
+          echo "SDK: $SDK"
+          SM=$(ls -d "$SDK"/cmdline-tools/*/bin/sdkmanager | sort -V | tail -1)
+          echo "sdkmanager: $SM"
+          yes | "$SM" --licenses > /dev/null || true
+          "$SM" --install "platforms;android-37.2" "build-tools;37.0.0" "platform-tools" > /dev/null
+          ls "$SDK/platforms"
 
       - name: Gradle
         uses: gradle/actions/setup-gradle@v4
