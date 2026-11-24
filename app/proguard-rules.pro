@@ -1,0 +1,7 @@
+-keep class ai.onnxruntime.** { *; }
+-keep class com.google.mlkit.** { *; }
+-dontwarn ai.onnxruntime.**
+-keepattributes *Annotation*, InnerClasses
+-keepclassmembers class kotlinx.serialization.json.** { *** Companion; }
+-keepclasseswithmembers class de.glanzstueck.app.** { kotlinx.serialization.KSerializer serializer(...); }
+-keep,includedescriptorclasses class de.glanzstueck.app.**$$serializer { *; }

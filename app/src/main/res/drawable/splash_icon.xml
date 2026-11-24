@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="240dp" android:height="240dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <group android:name="blob" android:pivotX="54" android:pivotY="54" android:scaleX="0.4" android:scaleY="0.4" android:rotation="-45">
+        <path android:pathData="M54,22 C62,22 64,28 70,30 C77,33 86,38 86,54 C86,62 80,64 78,70 C75,77 70,86 54,86 C46,86 44,80 38,78 C31,75 22,70 22,54 C22,46 28,44 30,38 C33,31 38,22 54,22 Z">
+            <aapt:attr name="android:fillColor">
+                <gradient android:type="linear" android:startX="22" android:startY="22" android:endX="86" android:endY="86"
+                    android:startColor="#FF7B5CFF" android:endColor="#FFFF6FA5" />
+            </aapt:attr>
+        </path>
+    </group>
+    <group android:name="hanger" android:translateX="0" android:translateY="1.5">
+        <path android:name="hook"
+            android:pathData="M51,42.5 L51,40 C51,38.3 52.2,37.6 53.4,37 C55.6,35.9 56.6,34.4 56.6,32.4 C56.6,29.9 54.6,28 52.1,28 C49.8,28 47.9,29.6 47.6,31.8"
+            android:strokeColor="#FFFFFFFF" android:strokeWidth="3.2" android:trimPathEnd="0"
+            android:strokeLineCap="round" android:strokeLineJoin="round" />
+        <path android:name="body"
+            android:pathData="M51,42.5 L29.5,58.2 C27.6,59.6 28.6,62.5 31,62.5 L71,62.5 C73.4,62.5 74.4,59.6 72.5,58.2 Z"
+            android:strokeColor="#FFFFFFFF" android:strokeWidth="3.2" android:trimPathEnd="0"
+            android:strokeLineCap="round" android:strokeLineJoin="round" />
+    </group>
+    <group android:name="sparkle" android:pivotX="73" android:pivotY="40" android:scaleX="0" android:scaleY="0">
+        <path android:pathData="M73,30 Q74.2,38.8 83,40 Q74.2,41.2 73,50 Q71.8,41.2 63,40 Q71.8,38.8 73,30 Z" android:fillColor="#FFFFFFFF" />
+    </group>
+</vector>
